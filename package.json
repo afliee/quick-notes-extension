@@ -1,0 +1,31 @@
+{
+  "name": "quick-notes-sidebar",
+  "version": "1.0.0",
+  "description": "A Chrome extension for quick note-taking with sidebar interface",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && npm run copy-assets",
+    "copy-assets": "cp public/manifest.json dist/ && cp -r public/icons dist/",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit",
+    "debug": "npm run build && open http://localhost:3000/debug.html && python3 -m http.server 3000",
+    "debug:build": "npm run build && echo '\n✅ Build complete! Open http://localhost:3000/debug.html to test'"
+  },
+  "dependencies": {
+    "lucide-react": "^0.263.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.246",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  }
+}

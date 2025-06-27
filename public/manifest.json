@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Quick Notes Sidebar",
+  "version": "1.0.0",
+  "description": "A quick note-taking extension with sidebar interface",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "alarms"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Quick Notes Sidebar",
+    "default_icon": {
+      "16": "icons/icon16.svg",
+      "32": "icons/icon32.svg",
+      "48": "icons/icon48.svg",
+      "128": "icons/icon128.svg"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon16.svg",
+    "32": "icons/icon32.svg",
+    "48": "icons/icon48.svg",
+    "128": "icons/icon128.svg"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';"
+  },
+  "web_accessible_resources": []
+} 
